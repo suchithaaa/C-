@@ -41,5 +41,6 @@ namespace Exercises
 <br>
 ![image](https://user-images.githubusercontent.com/98377715/152291690-68cca06b-f4d6-45e2-8416-a44f2afa6569.png)
 **binarytraingle**
-![image](https://user-images.githubusercontent.com/98377715/152293591-fb370bad-5277-4b09-869e-a06c892b67f0.png)
+![image](https://user-images.githubusercontent.com/98377715/152293787-f9b6f9f5-cc4c-44b9-9627-e36269297fad.png)
+
 
