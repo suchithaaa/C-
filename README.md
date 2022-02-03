@@ -75,3 +75,34 @@ namespace Exercises
 
 
 
+
+
+**Graycode**
+using System;<br>
+
+namespace Exercises<br>
+{<br>
+    class GrayCode<br>
+    {
+        static int getGray(int n)
+        {
+            return n ^ (n >> 1);
+         }
+        static void Main(string[] args)
+        {
+            int InputNum, GrayNum;
+            Console.Write("\n Enter the decimal number:");
+            InputNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n Binary equivalent of {0}: {1}", InputNum, Convert.ToString(InputNum, 2));
+            GrayNum = getGray(InputNum);
+            Console.WriteLine("\n Graycode equivalent of {0}: {1}", InputNum, Convert.ToString(GrayNum, 2));
+        }
+    }
+}
+
+
+
+
+
+
+
