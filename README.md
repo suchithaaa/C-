@@ -72,6 +72,9 @@ namespace Exercises
         }
     }
 }
+<br>
+**output**
+![image](https://user-images.githubusercontent.com/98377715/152469293-b184bde6-be55-42ae-9c8d-33d29b31b8db.png)
 
 
 
