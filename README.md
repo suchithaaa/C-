@@ -326,6 +326,37 @@ namespace Exercises
 ![image](https://user-images.githubusercontent.com/98377715/152485527-8fc3f0ba-8399-4043-b026-d89b925b53c7.png)
 
 
+**  frequency of the word **
+using System;
+namespace Exercises
+{
+    class FrequencyIS
+    {
+        static void Main(string[] args)
+        {
+            int count = 0;
+            String inputString;
+            Console.WriteLine("\n     Frequency of word 'is'   ");
+            Console.Write("\n Enter the input string :");
+            inputString = Console.ReadLine();
+            char[] separator = { ',', ' ', '.', '!', '\n' };
+            string testString = inputString.ToLower();
+            String[] outcomes = testString.Split(separator);
+            foreach (String s in outcomes)
+            {
+                Console.WriteLine(s);
+                if (s == "is")
+                    count++;
+            }
+            Console.WriteLine("\n Number of 'is' in"+ inputString +" is:" +count);
+                }
+    }
+}
+<br>
+**  output **
+![image](https://user-images.githubusercontent.com/98377715/152488089-cf8c4480-4b36-42c6-8b4d-05590d13174b.png)
+
+
 
 
 
