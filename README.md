@@ -72,12 +72,10 @@ namespace Exercises
         }
     }
 }
+
 <br>
 **output**
 ![image](https://user-images.githubusercontent.com/98377715/152469293-b184bde6-be55-42ae-9c8d-33d29b31b8db.png)
-
-
-
 
 
 **Graycode**
@@ -102,6 +100,50 @@ namespace Exercises<br>
         }
     }
 }
+
+**volume of 2 boxes**
+using System;
+namespace Exercises
+{
+    class Box
+    {
+        float width;
+        float height;
+        float length;
+        public float volume
+        {
+            get { return width * height * length; }
+        }
+        public Box(float width, float height, float length)
+        {
+            this.width = width;
+            this.height = height;
+            this.length = length;
+        }
+        public static float operator +(Box box1, Box box2)
+        {
+            return box1.volume + box2.volume;
+        }
+        public override string ToString()
+        {
+            return "box with width" + width + ",height" + height + " and length" + length;
+        }
+    }
+    class operatoroverloading
+    {
+        public static void Main()
+        {
+            Box box1 = new Box(10, 20, 30);
+            Box box2 = new Box(25, 32, 15);
+            Console.WriteLine("volume of {0} is:{1}", box1, box1.volume);
+            Console.WriteLine("volume of {0} is:{1}", box2, box2.volume);
+            Console.WriteLine("volume after adding boxes:{0}", box1 + box2);
+        }
+    }
+}
+<br>
+**  output **
+![image](https://user-images.githubusercontent.com/98377715/152473394-73214341-ba4c-4fa1-a10f-a0b1dd4760c2.png)
 
 
 
