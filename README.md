@@ -357,47 +357,56 @@ namespace Exercises
 ![image](https://user-images.githubusercontent.com/98377715/152488089-cf8c4480-4b36-42c6-8b4d-05590d13174b.png)
 
 
+**   jagged array location**
 using System;
-using System.Diagnostics;
-namespace Exercises
-{ 
+using System.Diagnostics; 
+namespace Exrecises
+{
     class BenchmarkAllocation
     {
-        const int_max= 100000;
-        static void main(string[] args)
+        const int _max= 100000;
+        static void Main(string[] args)
         {
-            var Arr2D = new int[100, 100];
+            var Arr2D = new int[100,100];
             var ArrJagged = new int[100][];
             for (int i = 0; i < 100; i++)
             {
                 ArrJagged[i] = new int[100];
             }
             var Stopwatch2D = Stopwatch.StartNew();
-            for(int i=0;i<-max;i++)
+            for (int i = 0; i < _max; i++)
             {
                 for (int j = 0; j < 100; j++)
                 {
                     for (int k = 0; k < 100; k++)
                     {
-                        Arr2D[j, k] = k;
+                        Arr2D[j,k] = k;
                     }
                 }
             }
-            Stopwatch2d.stop();
+            Stopwatch2D.Stop();
             var StopwatchJagged = Stopwatch.StartNew();
-            for (int i = 0; i < -max; i++)
+            for (int i = 0; i < _max; i++)
             {
-                for (int j = 0; i < 100; j++)
+                for (int j = 0; j < 100; j++)
                 {
                     for (int k = 0; k < 100; k++)
                     {
-                        ArrJagged[i][k] = k;
+                        ArrJagged[j][k] = k;
                     }
                 }
             }
-
             StopwatchJagged.Stop();
-            Console.
+            Console.Write("\n Time taken for allocation in case of 2D array:");
+            Console.WriteLine(Stopwatch2D.Elapsed.TotalMilliseconds + "millisecods");
+            Console.Write("\n Time taken for allocation in case of Jagged array:");
+            Console.WriteLine(StopwatchJagged.Elapsed.TotalMilliseconds + "milliseconds");
+        }
+    }
+}
+**   output**
+![image](https://user-images.githubusercontent.com/98377715/154411159-282f0942-ce13-49aa-b475-7404b116729a.png)
+
 
 
 
