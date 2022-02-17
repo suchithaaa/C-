@@ -404,8 +404,66 @@ namespace Exrecises
         }
     }
 }
+<br>
 **   output**
 ![image](https://user-images.githubusercontent.com/98377715/154411159-282f0942-ce13-49aa-b475-7404b116729a.png)
+
+
+
+**   diagonal matrix**
+
+using System;
+namespace Exercises
+{
+    class SumOfDiagonals
+    {
+        static void Main(string[] args)
+        {
+            int MaxRow, Maxcol, Sum = 0;
+            int[,] Matrix;
+            Console.WriteLine("\n -----SUM OF DIAGONAL OF A MATRIX ----\n");
+            Console.Write("\n Enter the number of rows:");
+            MaxRow = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n Enter the number of columns:");
+            Maxcol = Convert.ToInt32(Console.ReadLine());
+            if (MaxRow != Maxcol)
+            {
+                Console.WriteLine("\n The Dimensions entered are not of Square Matrix.");
+                Console.WriteLine("\n Exiting the program.");
+                return;
+            }
+            Matrix = new int[MaxRow, Maxcol];
+            for (int i = 0; i < MaxRow; i++)
+            {
+                for (int j = 0; j < Maxcol; j++)
+                {
+                    Console.Write("\n Enter the ({0},{1})th element of the matrix:", (i + 1), (j + 1));
+                    Matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("\n The entered Matrix is:");
+            for (int i = 0; i < MaxRow; i++)
+            {
+                for (int j = 0; j < Maxcol; j++)
+                {
+                    Console.Write(" " + Matrix[i, j]);
+                    if (i == j)
+                    {
+                        Sum += Matrix[i, j];
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("\n The Sum of Diagonal is" + Sum);
+        }
+    }
+}
+<br>
+**  output  **
+![image](https://user-images.githubusercontent.com/98377715/154416175-8e73abc5-9c0f-4db3-baf6-8ed4f44ba9e8.png)
+![image](https://user-images.githubusercontent.com/98377715/154416251-6b19654c-56e2-4126-8c78-01a5ab6f9b33.png)
+
+
 
 
 
