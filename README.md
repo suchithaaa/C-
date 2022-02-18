@@ -647,6 +647,44 @@ namespace Exercises
 <br>
 ![image](https://user-images.githubusercontent.com/98377715/154626207-4caebdd6-ddac-460b-a5bd-1665b1d80312.png)
 
+**  thread pools **
+using System;
+using System.Threading;
+namespace Exercises
+{
+    class ThreadPoolProg
+    {
+        public void ThreadFun1(object obj)
+        {
+            int loop = 0;
+            for (loop = 0; loop <= 4; loop++)
+            {
+                Console.WriteLine("Thread1 is executing");
+            }
+        }
+        public void ThreadFun2(object obj)
+        {
+            int loop = 0;
+            for (loop = 0; loop <= 4; loop++)
+            {
+                Console.WriteLine("Thread2 is executing");
+            }
+        }
+        public static void Main()
+        {
+            ThreadPoolProg TP = new ThreadPoolProg();
+            for (int i = 0; i < 2; i++)
+            {
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));
+            }
+            Console.ReadKey();
+        }
+    }
+}
+<br>
+**   output **
+![image](https://user-images.githubusercontent.com/98377715/154629669-f831f601-2130-4a8a-8dfc-16df95d8d7af.png)
 
 
 
