@@ -587,6 +587,68 @@ namespace Exercises
 ![image](https://user-images.githubusercontent.com/98377715/154623257-0db55f2a-cedd-4ede-b654-1ecbb77594c8.png)
 
 
+**   Icomparable interface **
+using System;
+namespace Exercises
+{
+    class Fraction : IComparable
+    {
+        int z, n;
+        public Fraction(int z, int n)
+        {
+            this.z = z;
+            this.n = n;
+        }
+        public static Fraction operator +(Fraction a, Fraction b)
+        {
+            return new Fraction(a.z * b.n + a.n * b.z, a.n * b.n);
+        }
+        public static Fraction operator *(Fraction a, Fraction b)
+        {
+            return new Fraction(a.z * b.z, a.n * b.n);
+        }
+        public int CompareTo(object obj)
+        {
+            Fraction f = (Fraction)obj;
+            if ((float)z / n < (float)f.z / f.n)
+                return -1;
+            else if ((float)z / n > (float)f.z / f.n)
+                return 1;
+            else
+                return 0;
+        }
+        public override string ToString()
+        {
+            return z + "/" + n;
+        }
+    }
+    class IcompInterface
+    {
+        public static void Main()
+        {
+            Fraction[] a = {
+                new Fraction(5, 2),
+                new Fraction(29, 6),
+                new Fraction(4, 5),
+                new Fraction(10, 8),
+                new Fraction(34, 7)
+            };
+            Array.Sort(a);
+            Console.WriteLine("Implementing the Icomparable Interface in" + "Displaying Fractions:");
+            foreach (Fraction f in a)
+            {
+                Console.WriteLine(f + " ");
+            }
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+    }
+}
+<br>
+![image](https://user-images.githubusercontent.com/98377715/154626207-4caebdd6-ddac-460b-a5bd-1665b1d80312.png)
+
+
+
 
 
 
