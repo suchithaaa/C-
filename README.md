@@ -546,7 +546,45 @@ namespace Exercises
 ![image](https://user-images.githubusercontent.com/98377715/154424768-d8181d18-315c-42bb-ab0b-c39e1f480a92.png)
 ![image](https://user-images.githubusercontent.com/98377715/154424924-6a443d9f-fee5-458b-a0af-dd6bff024c9f.png)
 
+**  file comparison **
 
+using System;
+using System.IO;
+namespace Exercises
+{
+    class FileRead
+    {
+        public static void Main()
+        {
+            string file1;
+            string file2;
+            Console.Write("Enter the first file path:");
+            file1 = Console.ReadLine();
+            Console.Write("Enter the second file path:");
+            file2 = Console.ReadLine();
+            if (!File.Exists(file1))
+            {
+                Console.WriteLine("First file does not exist!");
+            }
+            else if (!File.Exists(file2))
+            {
+                Console.WriteLine("second file does not exist!");
+            }
+            else if (File.ReadAllText(file1) == File.ReadAllText(file2))
+            {
+                Console.WriteLine("Both files contain the same content");
+            }
+            else
+            {
+                Console.WriteLine("Contents of files are not same");
+            }
+        }
+    }
+}
+<br>
+**   output **
+![image](https://user-images.githubusercontent.com/98377715/154622894-016b1a4a-a96e-4888-b3a2-1bfe6648557e.png)
+![image](https://user-images.githubusercontent.com/98377715/154623257-0db55f2a-cedd-4ede-b654-1ecbb77594c8.png)
 
 
 
