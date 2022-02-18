@@ -688,6 +688,59 @@ namespace Exercises
 
 
 
+using System;
+namespace Exercises
+{
+    class ExceptionHandling
+    {
+        static void Main(string[] args)
+        {
+            Age a = new Age();
+            try
+            {
+                a.displayAge();
+            }
+            catch (AgeISNegativeException e)
+            {
+                Console.WriteLine("AgeISNegativeException:{0}",e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Execution of Finally block is done.");
+            }
+        }
+    }
+}
+public class AgeISNegativeException : Exception
+{
+    public AgeISNegativeException(string message):base(message)
+        {
+        }
+}
+      public class Age
+{
+    int age = -5;
+    public void displayAge()
+    {
+        if (age < 0)
+        {
+            throw (new AgeISNegativeException("Age cannot be negative"));
+        }
+        else
+        {
+            Console.WriteLine("Age is:{0}", age);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
