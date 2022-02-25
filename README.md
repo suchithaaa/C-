@@ -1,4 +1,5 @@
-﻿using System;
+**  Amicable Number**
+using System;
 
 namespace Exercises
 {
@@ -100,6 +101,8 @@ namespace Exercises<br>
         }
     }
 }
+<br>
+
 
 **volume of 2 boxes**
 using System;
