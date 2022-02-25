@@ -732,9 +732,33 @@ public class AgeISNegativeException : Exception
         }
     }
 }
+<br>
 **   output **
 ![image](https://user-images.githubusercontent.com/98377715/155656336-8a53bd1c-63ce-4ec9-b3f2-92b04d86190e.png)
-
+ 
+ 
+ **   fibonacci number**
+ using System;
+public class FibonacciExample
+{
+    public static void Main(string[] args)
+    {
+        int n1 = 0, n2 = 1, n3, i, number;
+        Console.Write("Enter the number of elements:");
+        number = int.Parse(Console.ReadLine());
+        Console.Write(n1 + " " + n2 + " ");
+        for (i = 2; i < number; ++i)
+        {
+            n3 = n1 + n2;
+            Console.Write(n3 + " ");
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+}
+<br>
+**   output **
+![image](https://user-images.githubusercontent.com/98377715/155660475-08c39fce-abbf-4c21-8e8f-1c7e2a989a40.png)
 
 
 
