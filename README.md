@@ -759,6 +759,34 @@ public class FibonacciExample
 <br>
 **   output **
 ![image](https://user-images.githubusercontent.com/98377715/155660475-08c39fce-abbf-4c21-8e8f-1c7e2a989a40.png)
+  **  prime number**
+  using System;
+public class PrimeNumberExample
+{
+    public static void Main(string[] args)
+    {
+        int n, i, m = 0, flag = 0;
+        Console.Write(" Enter the Number to check Prime:");
+        n = int.Parse(Console.ReadLine());
+        m = n / 2;
+        for (i = 2; i <= m; i++)
+        {
+            if (n % i == 0)
+            {
+                Console.Write("Number is not Prime.");
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0)
+            Console.Write("Number is Prime.");
+    }
+}
+<br>
+**  output**
+![image](https://user-images.githubusercontent.com/98377715/155661718-fdf187c4-ed8a-4fa3-9c6e-8488ad95ef51.png)
+
+
 
 
 
