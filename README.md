@@ -785,6 +785,8 @@ public class PrimeNumberExample
 <br>
 **  output**
 ![image](https://user-images.githubusercontent.com/98377715/155661718-fdf187c4-ed8a-4fa3-9c6e-8488ad95ef51.png)
+![image](https://user-images.githubusercontent.com/98377715/155661887-1c9f8766-d3e3-4da4-ba3c-fafed2e85ec6.png)
+
 
 
 
