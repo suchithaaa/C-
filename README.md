@@ -862,6 +862,31 @@ public class ArmstrongExample
  **  output  **
  ![image](https://user-images.githubusercontent.com/98377715/155667891-66e9054f-961e-4c9a-b979-61b4a566f3fc.png)
  ![image](https://user-images.githubusercontent.com/98377715/155667999-73616d2f-15c2-40be-9c3b-921517c974f1.png)
+ 
+ 
+   **  sum of digits**
+using System;
+public class SumExample
+{
+    public static void Main(string[] args)
+    {
+        int n, sum = 0, m;
+        Console.Write("Enter a number:");
+        n = int.Parse(Console.ReadLine());
+        while (n > 0)
+        {
+            m = n % 10;
+            sum = sum + m;
+            n = n / 10;
+        }
+        Console.Write("Sum is=" + sum);
+    }
+}
+
+<br>
+**  output **
+
+![image](https://user-images.githubusercontent.com/98377715/155669320-9dd1972d-b919-4b17-8718-65d876bc8ecd.png)
 
 
 
