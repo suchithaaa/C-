@@ -836,6 +836,36 @@ public class FactorialExample
 ![image](https://user-images.githubusercontent.com/98377715/155666314-7249ba1d-16f5-47b9-ab31-0779ed26e83c.png)
 
 
+**  armstrong number**
+using System;
+public class ArmstrongExample
+{
+    public static void Main(string[] args)
+    {
+        int n, r, sum = 0, temp;
+        Console.Write("Enter the Number=");
+        n = int.Parse(Console.ReadLine());
+        temp = n;
+        while (n > 0)
+        {
+            r = n % 10;
+            sum = sum + (r * r * r);
+            n = n / 10;
+        }
+        if (temp == sum)
+            Console.Write("Armstrong Number.");
+        else
+            Console.Write("Not Armstrong Number.");
+    }
+}
+ <br>
+ **  output  **
+ ![image](https://user-images.githubusercontent.com/98377715/155667891-66e9054f-961e-4c9a-b979-61b4a566f3fc.png)
+ ![image](https://user-images.githubusercontent.com/98377715/155667999-73616d2f-15c2-40be-9c3b-921517c974f1.png)
+
+
+
+
 
 
 
