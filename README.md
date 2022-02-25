@@ -815,6 +815,26 @@ public class PalindromeExample
 ![image](https://user-images.githubusercontent.com/98377715/155664532-918ebae9-44ec-4d2c-8ed6-ee9655911677.png)
 ![image](https://user-images.githubusercontent.com/98377715/155664676-cfcfc87e-8af6-48a3-9fbf-6314b678aa0f.png)
 
+**  factorial number **
+using System;
+public class FactorialExample
+{
+    public static void Main(string[] args)
+    {
+        int i, fact = 1, number;
+        Console.Write("Enter any Number:");
+        number = int.Parse(Console.ReadLine());
+        for (i = 1; i <= number; i++)
+        {
+            fact = fact * i;
+        }
+        Console.Write("Factorial of" + number + " is:" + fact);
+    }
+}
+<br>
+**   output **
+![image](https://user-images.githubusercontent.com/98377715/155666314-7249ba1d-16f5-47b9-ab31-0779ed26e83c.png)
+
 
 
 
