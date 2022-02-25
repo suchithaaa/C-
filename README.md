@@ -788,6 +788,35 @@ public class PrimeNumberExample
 ![image](https://user-images.githubusercontent.com/98377715/155661887-1c9f8766-d3e3-4da4-ba3c-fafed2e85ec6.png)
 
 
+**   palindrome**
+using System;
+public class PalindromeExample
+{
+    public static void Main(string[] args)
+    {
+        int n, r, sum = 0, temp;
+        Console.Write("Enter the Number:");
+        n = int.Parse(Console.ReadLine());
+        temp = n;
+        while (n > 0)
+        {
+            r = n % 10;
+            sum = (sum * 10) + r;
+            n = n / 10;
+        }
+        if (temp == sum)
+            Console.Write("Number is palindrome.");
+        else
+            Console.Write("Number is not palindrome");
+    }
+}
+<br>
+**  output **
+![image](https://user-images.githubusercontent.com/98377715/155664532-918ebae9-44ec-4d2c-8ed6-ee9655911677.png)
+![image](https://user-images.githubusercontent.com/98377715/155664676-cfcfc87e-8af6-48a3-9fbf-6314b678aa0f.png)
+
+
+
 
 
 
