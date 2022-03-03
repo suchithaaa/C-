@@ -913,6 +913,7 @@ public class ReverseExample
     }
 }
 <br>
+**   output **
 ![image](https://user-images.githubusercontent.com/98377715/155672177-f7379088-31e5-4348-97e1-8a8dcb690ff6.png)
 
 
