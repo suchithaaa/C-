@@ -915,6 +915,32 @@ public class ReverseExample<br>
 ![image](https://user-images.githubusercontent.com/98377715/155672177-f7379088-31e5-4348-97e1-8a8dcb690ff6.png)
 
 
+**  graycode **
+using System;
+namespace Exercises
+{
+    class GrayCode
+    {
+        static int getGray(int n)
+        {
+            return n ^ (n >> 1);
+        }
+        static void Main(string[] args)
+        {
+            int InputNum, GrayNum;
+            Console.Write("\n Enter the decimal number:");
+            InputNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n Binary equivalent of{0}:{1}", InputNum, Convert.ToString(InputNum, 2));
+            GrayNum = getGray(InputNum);
+            Console.WriteLine("\n Gray code equivalent of{0}:{1}", InputNum, Convert.ToString(GrayNum, 2));
+        }
+    }
+}
+<br>
+![image](https://user-images.githubusercontent.com/98377715/156505824-6fff6c7b-9906-40ae-b423-b8b0b9c81d3f.png)
+
+
+
 
 
 
