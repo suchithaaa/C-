@@ -893,25 +893,23 @@ public class SumExample
 
 
 **  reverse the number **
-using System;
-public class ReverseExample
-{
-    public static void Main(string[]  args)
-
-    {
-        int n, reverse = 0, rem;
-        Console.Write("Enter a number:");
-        n = int.Parse(Console.ReadLine());
-        while (n != 0)
-        {
-            rem = n % 10;
-            reverse = reverse * 10 +rem;
-            n /= 10;
-
-        }
-        Console.Write("Reversed Number:" + reverse);
-    }
-}
+using System;<br>
+public class ReverseExample<br>
+{<br>
+    public static void Main(string[]  args)<br>
+    {<br>
+        int n, reverse = 0, rem;<br>
+        Console.Write("Enter a number:");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        while (n != 0)<br>
+        {<br>
+            rem = n % 10;<br>
+            reverse = reverse * 10 +rem;<br>
+            n /= 10;<br>
+        }<br>
+        Console.Write("Reversed Number:" + reverse);<br>
+    }<br>
+}<br>
 <br>
 **   output **
 ![image](https://user-images.githubusercontent.com/98377715/155672177-f7379088-31e5-4348-97e1-8a8dcb690ff6.png)
