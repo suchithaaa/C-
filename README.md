@@ -77,33 +77,6 @@ namespace Exercises
 **output**
 ![image](https://user-images.githubusercontent.com/98377715/156500758-0855c5e6-fabf-41cc-aad5-6510caf3e1d1.png)
 
-
-
-**Graycode**
-using System;<br>
-
-namespace Exercises<br>
-{<br>
-    class GrayCode<br>
-    {
-        static int getGray(int n)
-        {
-            return n ^ (n >> 1);
-         }
-        static void Main(string[] args)
-        {
-            int InputNum, GrayNum;
-            Console.Write("\n Enter the decimal number:");
-            InputNum = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\n Binary equivalent of {0}: {1}", InputNum, Convert.ToString(InputNum, 2));
-            GrayNum = getGray(InputNum);
-            Console.WriteLine("\n Graycode equivalent of {0}: {1}", InputNum, Convert.ToString(GrayNum, 2));
-        }
-    }
-}
-<br>
-
-
 **volume of 2 boxes**
 using System;
 namespace Exercises
@@ -648,6 +621,7 @@ namespace Exercises
     }
 }
 <br>
+output
 ![image](https://user-images.githubusercontent.com/98377715/154626207-4caebdd6-ddac-460b-a5bd-1665b1d80312.png)
 
 **  thread pools **
