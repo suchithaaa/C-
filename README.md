@@ -1050,6 +1050,8 @@ namespace WindowsFormsApp7
 <br> 
 **  output**
 ![image](https://user-images.githubusercontent.com/98377715/158942838-132530e7-83ac-469c-bb95-18a46bf3bf26.png)
+![image](https://user-images.githubusercontent.com/98377715/158943004-cb72641b-b980-4683-a0d0-e0415b5843f0.png)
+![image](https://user-images.githubusercontent.com/98377715/158943118-96e7e2fc-bb9f-40c4-a3b1-b295a0237071.png)
 
 
     
