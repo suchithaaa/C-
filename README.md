@@ -914,6 +914,87 @@ namespace Exercises
 **output**
 ![image](https://user-images.githubusercontent.com/98377715/156505824-6fff6c7b-9906-40ae-b423-b8b0b9c81d3f.png)
 
+**   windows application**
+**  digit to words**
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Text = NumtoWord(long.Parse(textBox1.Text));
+        }
+        public string NumtoWord(long number)
+        {
+            string word = " ";
+            if (number == 0)
+            {
+                return "zero";
+            }
+            if (number < 0)
+            {
+                return "Minus" + Math.Abs(number);
+            }
+            if (number / 10000000 > 0)
+            {
+                word += NumtoWord(number / 10000000) + "crore";
+                number %= 10000000;
+            }
+            if (number / 100000 > 0)
+            {
+                word += NumtoWord(number / 100000) + "lacs";
+                number %= 100000;
+            }
+            if (number / 100 > 0)
+            {
+                word += NumtoWord(number / 1000) + "Thousand";
+                number %= 1000;
+            }
+            if (number / 100 > 0)
+            {
+                word += NumtoWord(number / 100) + "Hundred";
+                number %= 100;
+            }
+            if (number > 0)
+            {
+                string[] units = new string[] { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "nine","ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
+                string[] Tens = new string[] { "Zero", "TEN", "Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
+                if (number < 20)
+                {
+                    word += units[number];
+                }
+                else
+                {
+                    word += Tens[number / 10];
+                    if (number % 10 > 0)
+                    {
+                        word += units[number % 10];
+                    }
+                }
+            }
+            return word;
+
+        }
+    }
+}
+<br>
+**  output **
+![image](https://user-images.githubusercontent.com/98377715/158942313-36f684f2-6c68-4949-a894-1b6f30632064.png)
 
 
 
