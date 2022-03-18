@@ -996,8 +996,63 @@ namespace WindowsFormsApp3
 **  output **
 ![image](https://user-images.githubusercontent.com/98377715/158942313-36f684f2-6c68-4949-a894-1b6f30632064.png)
 
+**  reverse,padding and trimming the number**
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp7
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string inputString, revstr = " ";
+            int length;
+            inputString = txtInput.Text;
+            length = inputString.Length - 1;
+            while (length >= 0)
+            {
+                revstr = revstr + inputString[length];
+                length--;
+            }
+            MessageBox.Show("Reverse String IS:" + revstr, "Result");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            MessageBox.Show("String After Trimming:" + inputString.Trim(), "Result");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            inputString = inputString.PadLeft(10, '*');
+            inputString = inputString.PadRight(15, '*');
+            MessageBox.Show("String After Padding:" + inputString, "Result");
+        }
+    }
+}
+<br> 
+**  output**
+![image](https://user-images.githubusercontent.com/98377715/158942838-132530e7-83ac-469c-bb95-18a46bf3bf26.png)
 
 
+    
 
 
 
